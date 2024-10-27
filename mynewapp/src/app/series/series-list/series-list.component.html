@@ -1,3 +1,24 @@
-<p>
-  series-list works!
-</p>
+<!-- series-list.component.html -->
+<div class="series-container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Channel</th>
+        <th>Seasons</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let serie of series; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td class="name-column">{{ serie.name }}</td>
+        <td>{{ serie.channel }}</td>
+        <td>{{ serie.seasons }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="average-seasons">
+    Seasons average: {{ averageSeasons | number: '1.0-0' }} <!-- Muestra el promedio sin decimales -->
+  </div>
+</div>

@@ -7,14 +7,21 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
+<!-- app.component.html -->
+<header class="header">
+  <img src="https://th.bing.com/th?id=OIP.WparLXMIdKiAJfuPpgETEQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2" alt="TV Series Logo" class="logo">
+  <h2>TV Series</h2>
+</header>
+
 <main class="main">
   <app-series-list></app-series-list>
   <div class="content">
     <div class="divider" role="separator" aria-label="Divider"></div>
-    <div class="right-side">
-    </div>
+    <div class="right-side"></div>
   </div>
 </main>
+
+<router-outlet></router-outlet>
 
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

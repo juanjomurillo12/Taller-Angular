@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SeriesService } from '../series.service';
+import { Serie } from '../serie';
 
 @Component({
   selector: 'app-series-list',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeriesListComponent implements OnInit {
 
-  constructor() { }
+  series: Array<Serie> = [];
+  averageSeasons: number = 0; // Nueva propiedad para el promedio
 
-  ngOnInit() {
+  constructor(private seriesService: SeriesService) { }
+
+  getSeries(): void {
+    this.seriesService.getSeries().subscribe((series) => {
+      this.series = series;
+      this.calculateAverageSeasons(); // Calcular el promedio después de obtener las series
+    });
   }
 
+  calculateAverageSeasons(): void {
+    const totalSeasons = this.series.reduce((acc, serie) => acc + serie.seasons, 0);
+    this.averageSeasons = totalSeasons / this.series.length;
+  }
+
+  ngOnInit(): void {
+    this.getSeries();
+  }
 }

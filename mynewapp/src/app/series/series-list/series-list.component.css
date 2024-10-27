@@ -1,0 +1,52 @@
+/* series-list.component.css */
+
+.series-container {
+  margin: 20px auto;
+  width: 80%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+/* Aplicar color gris a todas las filas del cuerpo de la tabla */
+tbody tr {
+  background-color: #e0e0e0 !important; /* Color gris claro */
+}
+
+.name-column {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.average-seasons {
+  padding: 5px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Color gris más oscuro al pasar el mouse */
+tbody tr:hover {
+  background-color: #c7c7c7;
+}
+
+/* Estilo para el encabezado */
+header {
+  background-color: #2c8da4;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 4px solid #1a5868;
+}

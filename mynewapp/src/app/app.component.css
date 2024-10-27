@@ -1,0 +1,20 @@
+/* app.component.css */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #007b8f; /* Azul para el fondo de la cabecera */
+  color: white;
+}
+
+.header .logo {
+  height: 40px; /* Ajusta el tamaño de la imagen del logo */
+  margin-right: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+
